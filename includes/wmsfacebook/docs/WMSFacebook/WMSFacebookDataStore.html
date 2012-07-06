@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Docs For Class WMSFacebookDataStore</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name">Class WMSFacebookDataStore</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Represents a database built upon Facebook's Data Store API.</p>
+<p class="description"><p>Represents a database built upon Facebook's Data Store API.
+ This class facilitates the creation of objects (i.e., database tables) and association links. It also contains helper methods for data compression over HTTP (using bzip2 compression). Using compression can significantly increase the amount of data that can be packed into Facebook's per-column (of type BLOB) data limit.</p></p>
+	<ul class="tags">
+				<li><span class="field">author:</span> Dave Jarvis</li>
+				<li><span class="field">version:</span> 0.0.1</li>
+				<li><span class="field">copyright:</span> Copyright (c) 2007 White Magic Software, Ltd.</li>
+				<li><span class="field">link:</span> <a href="http://www.davidjarvis.ca">http://www.davidjarvis.ca</a></li>
+				<li><span class="field">example:</span> <a href="../__examplesource/exsource_rePlaylist_dev_wmsfacebook_examples_data-store.php_62d77e7d5d49e2fab04de2bff1b397ac.html">Data Store Example</a></li>
+				<li><span class="field">license:</span> <a href="http://www.gnu.org/licenses/lgpl.html">GNU LGPL Version 3</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_WMSFacebookDataStore.php.html">/WMSFacebookDataStore.php</a> (line <span class="field"><a href="../__filesource/fsource_WMSFacebook__WMSFacebookDataStore.php.html#a23">23</a></span>)
+		</p>
+		
+				
+		<pre><a href="../WMSFacebook/WMSFacebookObject.html">WMSFacebookObject</a>
+   |
+   --WMSFacebookDataStore</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																				<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#compress" title="details" class="method-name">compress</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">9</span>])
+									</div>
+																																<div class="method-definition">
+					static 						<span class="method-result">void</span>
+										<a href="#decompress" title="details" class="method-name">decompress</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>)
+									</div>
+								
+												<div class="method-definition">
+											<span class="method-result">WMSFacebookDataStore</span>
+										<a href="#WMSFacebookDataStore" title="details" class="method-name">WMSFacebookDataStore</a>
+											(<span class="var-type">Facebook</span>&nbsp;<span class="var-name">$facebook</span>)
+									</div>
+																								<div class="method-definition">
+											<span class="method-result"><a href="../WMSFacebook/WMSFacebookDataStoreAssociationLink.html">WMSFacebookDataStoreAssociationLink</a></span>
+										<a href="#createAssociationLink" title="details" class="method-name">createAssociationLink</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$associationName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alias1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alias2</span>)
+									</div>
+																<div class="method-definition">
+											<span class="method-result"><a href="../WMSFacebook/WMSFacebookDataStoreObject.html">WMSFacebookDataStoreObject</a></span>
+										<a href="#createObjectType" title="details" class="method-name">createObjectType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$objectName</span>)
+									</div>
+																</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../WMSFacebook/WMSFacebookObject.html">WMSFacebookObject</a></span></p>
+					<blockquote>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$ASSOCATION_TYPE_ASYMMETRIC">WMSFacebookObject::$ASSOCATION_TYPE_ASYMMETRIC</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$ASSOCATION_TYPE_DIRECTED">WMSFacebookObject::$ASSOCATION_TYPE_DIRECTED</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$ASSOCATION_TYPE_SYMMETRIC">WMSFacebookObject::$ASSOCATION_TYPE_SYMMETRIC</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$ERROR_OBJECT_EXISTS">WMSFacebookObject::$ERROR_OBJECT_EXISTS</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$ERROR_OBJECT_NOT_FOUND">WMSFacebookObject::$ERROR_OBJECT_NOT_FOUND</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$OBJECT_TYPE_BINARY">WMSFacebookObject::$OBJECT_TYPE_BINARY</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$OBJECT_TYPE_INTEGER">WMSFacebookObject::$OBJECT_TYPE_INTEGER</a></span><br>
+							</span>
+													<span class="var-title">
+								<span class="var-name"><a href="../WMSFacebook/WMSFacebookObject.html#var$OBJECT_TYPE_STRING">WMSFacebookObject::$OBJECT_TYPE_STRING</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcompress" id="compress"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method compress</span> (line <span class="line-number"><a href="../__filesource/fsource_WMSFacebook__WMSFacebookDataStore.php.html#a82">82</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compresses the given data and makes it suitable for transmission over HTTP-based protocols. been compiled into PHP.</p>
+<p class="description"><p>Compresses the given data and makes it suitable for transmission over HTTP-based protocols. This uses bzip2 compression, which must have been compiled into PHP.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../WMSFacebook/WMSFacebookDataStore.html#methoddecompress">WMSFacebookDataStore::decompress()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			compress
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>, [<span class="var-type">int</span>&nbsp;<span class="var-name">$level</span> = <span class="var-default">9</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: Information to compress.</span>			</li>
+					<li>
+				<span class="var-type">int</span>
+				<span class="var-name">$level</span><span class="var-description">: How well to compress (9 = best/slow, 1 = poor/fast).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methoddecompress" id="decompress"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">static method decompress</span> (line <span class="line-number"><a href="../__filesource/fsource_WMSFacebook__WMSFacebookDataStore.php.html#a94">94</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Decompresses the given data that was previously compressed with a call to compress.</p>
+<p class="description"><p>Decompresses the given data that was previously compressed with a call to compress.</p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../WMSFacebook/WMSFacebookDataStore.html#methodcompress">WMSFacebookDataStore::compress()</a></li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+	    static
+		<span class="method-result">void</span>
+		<span class="method-name">
+			decompress
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$data</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$data</span><span class="var-description">: Information to decompress.</span>			</li>
+				</ul>
+		
+			
+	</div>
+
+<a name="methodWMSFacebookDataStore" id="WMSFacebookDataStore"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">Constructor WMSFacebookDataStore</span> (line <span class="line-number"><a href="../__filesource/fsource_WMSFacebook__WMSFacebookDataStore.php.html#a29">29</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Used to instantiate a new WMSFacebookDataStore instance.</p>
+<p class="description"><p>Used to instantiate a new WMSFacebookDataStore instance.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">WMSFacebookDataStore</span>
+		<span class="method-name">
+			WMSFacebookDataStore
+		</span>
+					(<span class="var-type">Facebook</span>&nbsp;<span class="var-name">$facebook</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">Facebook</span>
+				<span class="var-name">$facebook</span><span class="var-description">: Valid Facebook instance.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateAssociationLink" id="createAssociationLink"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<span class="method-title">createAssociationLink</span> (line <span class="line-number"><a href="../__filesource/fsource_WMSFacebook__WMSFacebookDataStore.php.html#a62">62</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an association link of a given name, with respect to the two aliases. be an alias that represents the Facebook user's unique identifier.</p>
+<p class="description"><p>Creates an association link of a given name, with respect to the two aliases. The aliases are names for the IDs. For example &quot;user_id&quot; would be an alias that represents the Facebook user's unique identifier.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../WMSFacebook/WMSFacebookDataStoreAssociationLink.html">WMSFacebookDataStoreAssociationLink</a></span>
+		<span class="method-name">
+			createAssociationLink
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$associationName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alias1</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$alias2</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$associationName</span><span class="var-description">: Name of the association link to create.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias1</span><span class="var-description">: Name of the ID to associate with alias2.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$alias2</span><span class="var-description">: Name of the ID to associate with alias1.</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcreateObjectType" id="createObjectType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<span class="method-title">createObjectType</span> (line <span class="line-number"><a href="../__filesource/fsource_WMSFacebook__WMSFacebookDataStore.php.html#a42">42</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an object type with the given name. if the object creation failed because it already exists. the error will be thrown to the calling code.</p>
+<p class="description"><p>Creates an object type with the given name. This will fail silently if the object creation failed because it already exists. Otherwise, the error will be thrown to the calling code.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../WMSFacebook/WMSFacebookDataStoreObject.html">WMSFacebookDataStoreObject</a></span>
+		<span class="method-name">
+			createObjectType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$objectName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$objectName</span><span class="var-description">: Name of the object type to create.</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../WMSFacebook/WMSFacebookObject.html">WMSFacebookObject</a></span></p>
+					<blockquote>
+													<span class="method-name"><a href="../WMSFacebook/WMSFacebookObject.html#methodWMSFacebookObject">WMSFacebookObject::WMSFacebookObject()</a></span><br>
+													<span class="method-name"><a href="../WMSFacebook/WMSFacebookObject.html#methodgetFacebook">WMSFacebookObject::getFacebook()</a></span><br>
+													<span class="method-name"><a href="../WMSFacebook/WMSFacebookObject.html#methodgetFacebookAPI">WMSFacebookObject::getFacebookAPI()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 17 Dec 2007 20:10:41 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

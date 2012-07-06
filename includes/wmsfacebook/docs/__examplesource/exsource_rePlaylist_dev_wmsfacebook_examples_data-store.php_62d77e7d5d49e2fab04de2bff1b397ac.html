@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>Data Store Example</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Data Store Example</h1>
+<div class="listing">
+<div class="src-code"><ol><li><div class="src-line">&lt;!--</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;Demonstrates&nbsp;the&nbsp;following&nbsp;tasks&nbsp;using&nbsp;Facebook's&nbsp;Data&nbsp;Store:</div></li>
+<li><div class="src-line">&nbsp;|</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Create&nbsp;a&nbsp;WMSFacebook&nbsp;instance&nbsp;(wrapper&nbsp;for&nbsp;Facebook's&nbsp;$facebook&nbsp;class)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Obtain&nbsp;a&nbsp;WMSFacebookApplication&nbsp;instance&nbsp;(for&nbsp;application-specific&nbsp;tasks)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Create&nbsp;a&nbsp;WMSFacebookDataStore&nbsp;(framework&nbsp;for&nbsp;Facebook's&nbsp;data&nbsp;store&nbsp;API)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Create&nbsp;a&nbsp;Facebook&nbsp;Object&nbsp;(i.e.,&nbsp;&quot;table&quot;)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Create&nbsp;a&nbsp;Facebook&nbsp;Property&nbsp;(i.e.,&nbsp;&quot;column&quot;)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Insert&nbsp;a&nbsp;Facebook&nbsp;Property&nbsp;(i.e.,&nbsp;&quot;row&quot;)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Associate&nbsp;a&nbsp;user's&nbsp;ID&nbsp;with&nbsp;an&nbsp;inserted&nbsp;row.</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Select&nbsp;a&nbsp;Facebook&nbsp;Property&nbsp;(i.e.,&nbsp;&quot;row&quot;)</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Remove&nbsp;the&nbsp;Facebook&nbsp;Object&nbsp;and&nbsp;all&nbsp;its&nbsp;data</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;*&nbsp;Remove&nbsp;the&nbsp;Facebook&nbsp;Association&nbsp;and&nbsp;all&nbsp;its&nbsp;data</div></li>
+<li><div class="src-line">&nbsp;|</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;The&nbsp;WMSFacebook&nbsp;API&nbsp;simplifies&nbsp;the&nbsp;exposed&nbsp;Data&nbsp;Store&nbsp;API.</div></li>
+<li><div class="src-line">&nbsp;|</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;For&nbsp;this&nbsp;example&nbsp;to&nbsp;work,&nbsp;the&nbsp;constants&nbsp;$APP_API_KEY,&nbsp;$APP_SECRET,</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;and&nbsp;$APP_URL&nbsp;must&nbsp;be&nbsp;defined.&nbsp;This&nbsp;file&nbsp;must&nbsp;exist&nbsp;at&nbsp;the&nbsp;same</div></li>
+<li><div class="src-line">&nbsp;|&nbsp;level&nbsp;as&nbsp;the&nbsp;&quot;wmsfacebook&quot;&nbsp;subdirectory.</div></li>
+<li><div class="src-line">&nbsp;+--&gt;</div></li>
+<li><div class="src-line">&lt;p&gt;</div></li>
+<li><div class="src-line"><span class="src-php">&lt;?</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-inc">require_once&nbsp;</span><span class="src-str">'constants.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-inc">require_once&nbsp;</span><span class="src-str">'wmsfacebook/WMSFacebook.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$wmsFacebook&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../WMSFacebook/WMSFacebook.html">WMSFacebook</a></span><span class="src-sym">(&nbsp;</span><span class="src-var">$APP_API_KEY</span><span class="src-sym">,&nbsp;</span><span class="src-var">$APP_SECRET&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$wmsUser&nbsp;</span>=&nbsp;<span class="src-var">$wmsFacebook</span><span class="src-sym">-&gt;</span><span class="src-id">login</span><span class="src-sym">(&nbsp;</span><span class="src-var">$APP_URL&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$wmsApp&nbsp;</span>=&nbsp;<span class="src-var">$wmsFacebook</span><span class="src-sym">-&gt;</span><span class="src-id">getWMSFacebookApplication</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Create&nbsp;the&nbsp;&quot;table&quot;&nbsp;and&nbsp;a&nbsp;&quot;column&quot;&nbsp;for&nbsp;that&nbsp;table.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$wmsDataStore&nbsp;</span>=&nbsp;<span class="src-var">$wmsFacebook</span><span class="src-sym">-&gt;</span><span class="src-id">getWMSFacebookDataStore</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$myTable&nbsp;</span>=&nbsp;<span class="src-var">$wmsDataStore</span><span class="src-sym">-&gt;</span><span class="src-id">createObjectType</span><span class="src-sym">(&nbsp;</span><span class="src-str">'my_table'&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$property&nbsp;</span>=&nbsp;<span class="src-var">$myTable</span><span class="src-sym">-&gt;</span><span class="src-id">createPropertyString</span><span class="src-sym">(&nbsp;</span><span class="src-str">'my_column'&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Define&nbsp;the&nbsp;link&nbsp;for&nbsp;the&nbsp;user's&nbsp;ID&nbsp;and&nbsp;the&nbsp;&quot;my_table&quot;&nbsp;ID.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$userTableLink&nbsp;</span>=&nbsp;<span class="src-var">$wmsDataStore</span><span class="src-sym">-&gt;</span><span class="src-id">createAssociationLink</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<span class="src-str">'user_table'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'user_id'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'table_id'&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Assign&nbsp;a&nbsp;value&nbsp;to&nbsp;the&nbsp;property&nbsp;that&nbsp;will&nbsp;be&nbsp;saved&nbsp;using&nbsp;Facebook's&nbsp;data</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;store.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$property</span><span class="src-sym">-&gt;</span><span class="src-id">setValue</span><span class="src-sym">(&nbsp;</span><span class="src-str">&quot;Facebook&nbsp;Data&nbsp;Store&nbsp;API&quot;&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Insert&nbsp;the&nbsp;property&nbsp;value&nbsp;into&nbsp;the&nbsp;data&nbsp;store.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$wmsRow&nbsp;</span>=&nbsp;<span class="src-var">$myTable</span><span class="src-sym">-&gt;</span><span class="src-id">insertProperties</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Set&nbsp;the&nbsp;association&nbsp;between&nbsp;this&nbsp;Facebook&nbsp;user&nbsp;and&nbsp;the&nbsp;row&nbsp;data</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;that&nbsp;was&nbsp;just&nbsp;inserted.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$association&nbsp;</span>=&nbsp;<span class="src-var">$userTableLink</span><span class="src-sym">-&gt;</span><span class="src-id">associate</span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;<span class="src-var">$wmsUser</span><span class="src-sym">-&gt;</span><a href="../WMSFacebook/WMSFacebookUser.html#methodgetId">getId</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-var">$wmsRow</span><span class="src-sym">-&gt;</span><a href="../WMSFacebook/WMSFacebookUser.html#methodgetId">getId</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Get&nbsp;the&nbsp;IDs&nbsp;of&nbsp;the&nbsp;rows&nbsp;that&nbsp;have&nbsp;been&nbsp;associated&nbsp;with&nbsp;the&nbsp;user.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$wmsRows&nbsp;</span>=&nbsp;<span class="src-var">$userTableLink</span><span class="src-sym">-&gt;</span><span class="src-id">getAssociatedObjects</span><span class="src-sym">(&nbsp;</span><span class="src-var">$wmsUser</span><span class="src-sym">-&gt;</span><a href="../WMSFacebook/WMSFacebookUser.html#methodgetId">getId</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Iterate&nbsp;over&nbsp;the&nbsp;rows&nbsp;to&nbsp;get&nbsp;the&nbsp;properties&nbsp;(i.e.,&nbsp;values)&nbsp;for&nbsp;each</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;row.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-key">foreach</span><span class="src-sym">(&nbsp;</span><span class="src-var">$wmsRows&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$row&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$properties&nbsp;</span>=&nbsp;<span class="src-var">$row</span><span class="src-sym">-&gt;</span><span class="src-id">select</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//&nbsp;Display&nbsp;the&nbsp;row&nbsp;data.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;<a href="http://www.php.net/print_r">print_r</a><span class="src-sym">(&nbsp;</span><span class="src-var">$properties&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line">&nbsp;</div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Remove&nbsp;all&nbsp;references&nbsp;to&nbsp;this&nbsp;table&nbsp;from&nbsp;the&nbsp;Facebook&nbsp;Data&nbsp;Store</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;Normally&nbsp;you&nbsp;would&nbsp;not&nbsp;perform&nbsp;these&nbsp;steps&nbsp;as&nbsp;they&nbsp;will&nbsp;erase</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;all&nbsp;the&nbsp;data&nbsp;for&nbsp;the&nbsp;given&nbsp;table,&nbsp;as&nbsp;well&nbsp;as&nbsp;erasing&nbsp;all&nbsp;associated</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;links&nbsp;for&nbsp;this&nbsp;application.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//&nbsp;However,&nbsp;since&nbsp;this&nbsp;is&nbsp;example&nbsp;code,&nbsp;it&nbsp;behooves&nbsp;us&nbsp;to&nbsp;tidy&nbsp;up.</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-comm">//</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$myTable</span><span class="src-sym">-&gt;</span><span class="src-id">drop</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-var">$userTableLink</span><span class="src-sym">-&gt;</span><span class="src-id">drop</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><span class="src-php">?&gt;</span></div></li>
+<li><div class="src-line">&lt;/p&gt;</div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 17 Dec 2007 20:10:44 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</body>
+</html>

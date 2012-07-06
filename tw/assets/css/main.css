@@ -1,0 +1,56 @@
+#a_advanced{
+	float:left;
+	outline: none;
+}
+
+#wrap {
+	float:left;
+	height:19px;
+	overflow:hidden;
+	position:relative;
+	width:45px;
+}
+#arrow-up, #arrow-down, #arrow-right, #arrow-left {
+	position:absolute;
+	background:transparent none repeat scroll 0 0;
+	clear:both;
+}
+#arrow-up-1, #arrow-up-2, #arrow-down-1, #arrow-down-2, #arrow-right-1, #arrow-right-2, #arrow-left-1, #arrow-left-2 {
+	height:0;
+	overflow:hidden;
+	width:0;
+}
+
+#arrow-right {
+	height:20px;
+	left:10px;
+	top:4px;
+}
+#arrow-right-1 {
+	border-left:6px solid black;
+	border-top:6px solid white;
+}
+#arrow-right-2 {
+	border-bottom:6px solid white;
+	border-left:6px solid black;
+}
+#arrow-down {
+	left:8px;
+	top:7px;
+	width:20px;
+}
+#arrow-down-1 {
+	border-bottom:6px solid white;
+	border-right:6px solid black;
+	float:left;
+}
+#arrow-down-2 {
+	border-bottom:6px solid white;
+	border-left:6px solid black;
+	float:left;
+}
+
+.clear{
+	display:block;
+	clear:both;
+}

@@ -1,0 +1,354 @@
+a:4:{s:7:"headers";a:16:{s:4:"date";s:29:"Thu, 28 Jan 2010 18:38:15 GMT";s:6:"server";s:2:"hi";s:13:"x-transaction";s:21:"1264703895-24449-1871";s:6:"status";s:6:"200 OK";s:4:"etag";s:34:""2ebe918ec2421f1ec6591c026c03f045"";s:13:"last-modified";s:29:"Thu, 28 Jan 2010 18:38:15 GMT";s:9:"x-runtime";s:7:"0.03838";s:12:"content-type";s:24:"text/html; charset=utf-8";s:6:"pragma";s:8:"no-cache";s:14:"content-length";s:5:"22515";s:13:"cache-control";s:62:"no-cache, no-store, must-revalidate, pre-check=0, post-check=0";s:7:"expires";s:29:"Tue, 31 Mar 1981 05:00:00 GMT";s:10:"x-revision";s:3:"DEV";s:10:"set-cookie";a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;a:2:{i:0;s:58:"auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";i:1;s:55:"param_q=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:58:"param_page=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:60:"param_status=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:75:"param_in_reply_to_status_id=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:65:"param_in_reply_to=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:60:"param_source=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:58:"param_user=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:56:"param_id=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:63:"dispatch_action=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";}i:1;s:320:"_twitter_sess=BAh7CToMY3NyZl9pZCIlYzM5NWU1NThkYjVhOWYyNGFkMGRlNTAwZDZhNzJl%250AZTM6EXRyYW5zX3Byb21wdDA6B2lkIiUxNDliMjY5YmQyNDAwYjQ1NThkYmYw%250AZDhjNTNkZWQ5MiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%250AOkZsYXNoSGFzaHsABjoKQHVzZWR7AA%253D%253D--2fe2eb95fb5009e3a76ee14f047e990ee2057166; domain=.twitter.com; path=/";}s:4:"vary";s:15:"Accept-Encoding";s:10:"connection";s:5:"close";}s:4:"body";s:22515:"<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+  <script type="text/javascript">
+//<![CDATA[
+var matches,url,path,domain;url=document.location.toString();try{domain=url.match(/https?:\/\/[^\/]+/);if(matches=url.match(/(.+?)#(.+)/)){url=matches[1];path=matches[2];if(path){var arr=path.split(/\?/);path=arr[0];var params=arr[1];path=path.replace(/^\//,"");var redirect_url=[domain,path].join("/");if(params){redirect_url=[redirect_url,params].join("?")}document.location=redirect_url}}}catch(err){};
+//]]>
+</script>
+  <script type="text/javascript">
+//<![CDATA[
+var page={};var onCondition=function(D,C,A,B){D=D;A=A?Math.min(A,5):5;B=B||100;if(D()){C()}else{if(A>1){setTimeout(function(){onCondition(D,C,A-1,B)},B)}}};
+//]]>
+</script>
+  
+
+
+  <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<meta content="en-us" http-equiv="Content-Language" />
+<meta content="Twitter is without a doubt the best way to share and discover what is happening right now." name="description" />
+<meta content="no" http-equiv="imagetoolbar" />
+<meta content="width = 780" name="viewport" />
+<meta content="4FTTxY4uvo0RZTMQqIyhh18HsepyJOctQ+XTOu1zsfE=" name="verify-v1" />
+<meta content="1" name="page" />
+<meta content="NOODP" name="robots" />
+<meta content="n" name="session-loggedin" />
+  <title>Twitter</title>
+  <link href="http://a1.twimg.com/a/1264550348/images/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+<link href="http://a1.twimg.com/a/1264550348/images/twitter_57.png" rel="apple-touch-icon" />
+  
+  <link href="http://a0.twimg.com/a/1264550348/stylesheets/front.css?1264632594" media="screen, projection" rel="stylesheet" type="text/css" />
+</head>
+
+<body class="timeline front" id="front">
+  <script type="text/javascript">
+//<![CDATA[
+if (window.top !== window.self) {document.write = "";window.top.location = window.self.location; setTimeout(function(){document.body.innerHTML='';},1);window.self.onload=function(evt){document.body.innerHTML='';};}
+//]]>
+</script>
+  <ul id="accessibility" class="offscreen">
+  <li><a href="#content" accesskey="0">Skip past navigation</a></li>
+  <li>On a mobile phone? Check out <a href="http://m.twitter.com/">m.twitter.com</a>!</li>
+  <li><a href="#footer" accesskey="2">Skip to navigation</a></li>
+    <li><a href="#signin">Skip to sign in form</a></li>
+</ul>
+
+
+  <div id="container">
+
+    <div id="topnav">
+      <div id="small_signup">
+        <span>New to Twitter?</span>
+        <a href="http://twitter.com/signup" class="signup-button">Sign up now</a>
+      </div>
+      Have an account? <a href="http://twitter.com/login" class="signin" tabindex="3"><span>Sign in</span></a>
+    </div>
+
+    <fieldset id="signin_menu" class="common-form standard-form">
+    
+      <form method="post" id="signin" action="https://twitter.com/sessions">
+    
+      <input id="authenticity_token" name="authenticity_token" type="hidden" value="f2d580d0ecb534556df5b953e8e46b5f0b3cba01" />        <p>
+          <label for="username">Username or email</label>
+          <input type="text" id="username" name="session[username_or_email]" value="" title="username"  tabindex="4"/>
+        </p>
+        <p>
+          <label for="password">Password</label>
+          <input type="password" id="password" name="session[password]" value="" title="password" tabindex="5" />
+        </p>
+        <p class="remember">
+            <input type="submit" id="signin_submit" value="Sign in" tabindex="7"/>
+            <input type="checkbox" id="remember" name="remember_me" value="1" tabindex="6"/>
+            <label for="remember">Remember me</label>
+        </p>
+        <p class="forgot">
+          <a href="/account/resend_password" id="resend_password_link">Forgot your password?</a>
+        </p>
+        <p class="forgot-username">
+          <a href="" id="forgot_username_link" title="If you remember your password, try logging in with your email">Forgot your username?</a>
+        </p>
+        <p class="complete">
+          <a href="/account/complete" id="account_complete_link">Already using Twitter on your phone?</a>
+        </p>
+        <input type="hidden" name="q" id="signin_q" value=""/>
+      </form>
+    </fieldset>
+
+    <div id="header">
+      <div id="header2">
+        <h1 id="tagline">Share and discover what&rsquo;s happening right now, anywhere in the world.</h1>
+        <a href="http://twitter.com/" class="logo"><img alt="Twitter" border="0" height="55" id="logo" src="http://a1.twimg.com/a/1264550348/images/logo.png" width="224" /></a>
+
+        <img alt="Tweet, tweet!" height="55" id="bird" src="http://a2.twimg.com/a/1264550348/images/frontpage-bird.png" width="80" />
+        <form action="/search" class="search" id="home_search" method="post"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="f2d580d0ecb534556df5b953e8e46b5f0b3cba01" /></div>
+          <div>
+            <div id="big_signup">
+              <label>Join the conversation</label>
+              <a href="http://twitter.com/signup" class="signup-button" id="signup_submit" tabindex="8">Sign up now</a>
+            </div>
+            
+              <label for="home_search_q">See what people are saying about&#8230;</label>
+              <input id="home_search_q" type="text" size="40" name="q" accesskey="/" tabindex="1"/>
+              <a href="#" id="home_search_submit" class="submit" tabindex="2">Search</a>
+            
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div id="trend_info">
+      <span>POPULAR TOPICS BY THE MINUTE, DAY, AND WEEK</span> <img alt="Trend info" height="16" src="http://a1.twimg.com/a/1264550348/images/icon-what.png" title="Twitter looks at every incoming tweet, then ranks the popularity of certain words or phrases in real time. Click any of the popular topics below to see what people are saying about them right now." width="16" />
+    </div>
+
+    <div id="trend_description">
+      <span></span><img alt="Trend Info" height="16" src="http://a1.twimg.com/a/1264550348/images/icon-what.png" title="Twitter looks at every incoming tweet, then ranks the popularity of certain words or phrases in real time. Click any of the popular topics below to see what people are saying about them right now. Some topic descriptions are sourced from WhatTheTrend.com." width="16" /><p></p>
+    </div>
+
+    <div id="trends">
+      
+        
+  <div class="current" title="Popular topics right now">
+    <ul>
+                
+            <li><a href="/search?q=Catcher" class="search_link" name="Catcher" rel="nofollow" title="Catcher">Catcher</a><em>J.D. Salinger, author of The Catcher in the Rye has died (Jan. 28). He was 91.</em></li>
+          
+            <li><a href="/search?q=Haiti+OR+%23haiti" class="search_link" name="Haiti OR #haiti" rel="nofollow" title="Haiti OR #haiti">Haiti</a><em>The country was hit by a 7.0 magnitude earthquake. People are tweeting to organize relief efforts or relay news.</em></li>
+          
+            <li><a href="/search?q=%22Apple+iPad%22+OR+%23iPad" class="search_link" name="&quot;Apple iPad&quot; OR #iPad" rel="nofollow" title="&quot;Apple iPad&quot; OR #iPad">Apple iPad</a><em>Steve Jobs announced Apple's new tablet computer at a press event yesterday (Jan. 27).</em></li>
+          
+            <li><a href="/search?q=%22Shorty+Award%22" class="search_link" name="&quot;Shorty Award&quot;" rel="nofollow" title="&quot;Shorty Award&quot;">Shorty Award</a><em>Awards &quot;honoring the best producers of short, real-time content.&quot; People are tweeting their votes.</em></li>
+          
+            <li><a href="/search?q=%22Howard+Zinn%22" class="search_link" name="&quot;Howard Zinn&quot;" rel="nofollow" title="&quot;Howard Zinn&quot;">Howard Zinn</a><em>The American historian and professor has passed away (Jan. 27). He was eighty-seven.</em></li>
+          
+            <li><a href="/search?q=%23imthetypeto" class="search_link" name="#imthetypeto" rel="nofollow" title="#imthetypeto">#imthetypeto</a><em>People are tweeting the sorts of things they would do because of the kind of person they are.</em></li>
+          
+            <li><a href="/search?q=%23nowplaying" class="search_link" name="#nowplaying" rel="nofollow" title="#nowplaying">#nowplaying</a><em>People are tweeting their media choice of the moment.</em></li>
+          
+            <li><a href="/search?q=%23subliminaltweet" class="search_link" name="#subliminaltweet" rel="nofollow" title="#subliminaltweet">#subliminaltweet</a><em>Tweets which defy their definition by trending, i.e. tweets that would have flown under the radar if so many people hadn't started making them.</em></li>
+          
+            <li><a href="/search?q=%23idothat2" class="search_link" name="#idothat2" rel="nofollow" title="#idothat2">#idothat2</a><em>People are RTing @idothat2 or tweeting their own examples of behaviors they imagine others may share.</em></li>
+          
+            <li><a href="/search?q=%23lingerieday" class="search_link" name="#lingerieday" rel="nofollow" title="#lingerieday">#lingerieday</a><em>Some people are considering changing their avatar to a photo of themselves wearing lingerie (girls) or underwear (guys). </em></li>
+          
+      
+    </ul>
+  </div>
+
+        
+        
+  <div class="daily" title="Popular topics today">
+    <ul>
+                
+            <li><a href="/search?q=Haiti+OR+%23haiti" class="search_link" name="Haiti OR #haiti" rel="nofollow" title="Haiti OR #haiti">Haiti</a><em>The country was hit by a 7.0 magnitude earthquake. People are tweeting to organize relief efforts or relay news.</em></li>
+          
+            <li><a href="/search?q=%22Apple+Tablet%22+OR+Tablet" class="search_link" name="&quot;Apple Tablet&quot; OR Tablet" rel="nofollow" title="&quot;Apple Tablet&quot; OR Tablet">Apple Tablet</a><em>Steve Jobs announced details about the iPad today at a press event (Jan. 27).</em></li>
+          
+            <li><a href="/search?q=iTablet+OR+%23iTablet" class="search_link" name="iTablet OR #iTablet" rel="nofollow" title="iTablet OR #iTablet">iTablet</a><em>One of the nicknames people have come up with for Apple's tablet computer. Steve Jobs announced details (including the product's actual name, &quot;iPad&quot;) at a press event today (Jan. 27).</em></li>
+          
+            <li><a href="/search?q=iTampon+OR+%23iTampon" class="search_link" name="iTampon OR #iTampon" rel="nofollow" title="iTampon OR #iTampon">iTampon</a><em>People are making a joke due to unfortunate word associations in the name of Apple's new tablet, the iPad (Jan. 27).</em></li>
+          
+            <li><a href="/search?q=iSlate" class="search_link" name="iSlate" rel="nofollow" title="iSlate">iSlate</a><em>One of the nicknames people have come up with for Apple's tablet computer. Steve Jobs announced details (including the product's actual name, &quot;iPad&quot;) at a press event today (Jan. 27).</em></li>
+          
+            <li><a href="/search?q=I-pad" class="search_link" name="I-pad" rel="nofollow" title="I-pad">I-pad</a></li>
+          
+            <li><a href="/search?q=Iphone" class="search_link" name="Iphone" rel="nofollow" title="Iphone">Iphone</a></li>
+          
+            <li><a href="/search?q=%22American+Idol%22+OR+%23idol" class="search_link" name="&quot;American Idol&quot; OR #idol" rel="nofollow" title="&quot;American Idol&quot; OR #idol">American Idol</a></li>
+          
+            <li><a href="/search?q=%22Mass+Effect+2%22" class="search_link" name="&quot;Mass Effect 2&quot;" rel="nofollow" title="&quot;Mass Effect 2&quot;">Mass Effect 2</a><em>The anticipated science fiction action-RPG sequel, developed by Bioware exclusively for the Xbox 360, is out today in North America (Jan. 26).</em></li>
+          
+            <li><a href="/search?q=Kindle" class="search_link" name="Kindle" rel="nofollow" title="Kindle">Kindle</a><em>People are tweeting about Amazon's Kindle as compared to Apple's newly announced iPad tablet, which comes with an e-reader app, iBooks.</em></li>
+          
+            <li><a href="/search?q=%22Frantic+Steve+Jobs%22+OR+%23jobs" class="search_link" name="&quot;Frantic Steve Jobs&quot; OR #jobs" rel="nofollow" title="&quot;Frantic Steve Jobs&quot; OR #jobs">Frantic Steve Jobs</a><em>From the title of an @TheOnion article: Frantic Steve Jobs Stays Up All Night Designing Apple Tablet.</em></li>
+          
+            <li><a href="/search?q=%22Apple%27s+iPad%22+OR+%23iPad" class="search_link" name="&quot;Apple's iPad&quot; OR #iPad" rel="nofollow" title="&quot;Apple's iPad&quot; OR #iPad">Apple's iPad</a></li>
+          
+      
+    </ul>
+  </div>
+
+        
+  <div class="weekly" title="Popular topics this week">
+    <ul>
+                
+            <li><a href="/search?q=Haiti+OR+%23Haiti" class="search_link" name="Haiti OR #Haiti" rel="nofollow" title="Haiti OR #Haiti">Haiti</a><em>The country was hit by a 7.0 magnitude earthquake. People are tweeting to organize relief efforts or relay news.</em></li>
+          
+            <li><a href="/search?q=%22Shorty+Award%22" class="search_link" name="&quot;Shorty Award&quot;" rel="nofollow" title="&quot;Shorty Award&quot;">Shorty Award</a><em>Awards &quot;honoring the best producers of short, real-time content.&quot; People are tweeting their votes.</em></li>
+          
+            <li><a href="/search?q=%22Jersey+Shore%22" class="search_link" name="&quot;Jersey Shore&quot;" rel="nofollow" title="&quot;Jersey Shore&quot;">Jersey Shore</a></li>
+          
+            <li><a href="/search?q=%22RIP+Johnny+Depp%22+OR+%22Johnny+Depp%22" class="search_link" name="&quot;RIP Johnny Depp&quot; OR &quot;Johnny Depp&quot;" rel="nofollow" title="&quot;RIP Johnny Depp&quot; OR &quot;Johnny Depp&quot;">RIP Johnny Depp</a></li>
+          
+            <li><a href="/search?q=%22Hope+for+Haiti+Now%22" class="search_link" name="&quot;Hope for Haiti Now&quot;" rel="nofollow" title="&quot;Hope for Haiti Now&quot;">Hope for Haiti Now</a></li>
+          
+            <li><a href="/search?q=Massachusetts" class="search_link" name="Massachusetts" rel="nofollow" title="Massachusetts">Massachusetts</a></li>
+          
+            <li><a href="/search?q=%22Dear+Internet%22" class="search_link" name="&quot;Dear Internet&quot;" rel="nofollow" title="&quot;Dear Internet&quot;">Dear Internet</a></li>
+          
+            <li><a href="/search?q=%22Follow+Friday%22" class="search_link" name="&quot;Follow Friday&quot;" rel="nofollow" title="&quot;Follow Friday&quot;">Follow Friday</a></li>
+          
+            <li><a href="/search?q=%22Scott+Brown%22" class="search_link" name="&quot;Scott Brown&quot;" rel="nofollow" title="&quot;Scott Brown&quot;">Scott Brown</a></li>
+          
+            <li><a href="/search?q=%22I+Love+INDONESIA%22+OR+Indonesia" class="search_link" name="&quot;I Love INDONESIA&quot; OR Indonesia" rel="nofollow" title="&quot;I Love INDONESIA&quot; OR Indonesia">I Love INDONESIA</a></li>
+          
+            <li><a href="/search?q=%22Super+Bowl%22" class="search_link" name="&quot;Super Bowl&quot;" rel="nofollow" title="&quot;Super Bowl&quot;">Super Bowl</a><em>People are following the story of a controversial ad that CBS may run during the NFL championship game featuring college football player Tim Tebow and his mother. There is some concern over potential anti-abortion/pro-life messaging.</em></li>
+          
+            <li><a href="/search?q=Conan" class="search_link" name="Conan" rel="nofollow" title="Conan">Conan</a></li>
+          
+      
+    </ul>
+  </div>
+
+        <span class="fade"> </span>
+      
+    </div>
+    <div class="wrapper">
+      <div id="sidebar">
+        
+          
+            <h2><strong>Trending</strong> topics</h2>
+            <div id="trends_list">
+              <ul>
+                
+                  
+                    <li><a href="/search?q=%23imthetypeto" name="#imthetypeto" title="People are tweeting the sorts of things they would do because of the kind of person they are." rel="nofollow">#imthetypeto</a></li>
+                  
+                    <li><a href="/search?q=%23nowplaying" name="#nowplaying" title="People are tweeting their media choice of the moment." rel="nofollow">#nowplaying</a></li>
+                  
+                    <li><a href="/search?q=Catcher" name="Catcher" title="J.D. Salinger, author of The Catcher in the Rye has died (Jan. 28). He was 91." rel="nofollow">Catcher</a></li>
+                  
+                    <li><a href="/search?q=%23subliminaltweet" name="#subliminaltweet" title="Tweets which defy their definition by trending, i.e. tweets that would have flown under the radar if so many people hadn't started making them." rel="nofollow">#subliminaltweet</a></li>
+                  
+                    <li><a href="/search?q=Haiti+OR+%23haiti" name="Haiti OR #haiti" title="The country was hit by a 7.0 magnitude earthquake. People are tweeting to organize relief efforts or relay news." rel="nofollow">Haiti</a></li>
+                  
+                    <li><a href="/search?q=%22Apple+iPad%22+OR+%23iPad" name="&quot;Apple iPad&quot; OR #iPad" title="Steve Jobs announced Apple's new tablet computer at a press event yesterday (Jan. 27)." rel="nofollow">Apple iPad</a></li>
+                  
+                    <li><a href="/search?q=%22Shorty+Award%22" name="&quot;Shorty Award&quot;" title="Awards &quot;honoring the best producers of short, real-time content.&quot; People are tweeting their votes." rel="nofollow">Shorty Award</a></li>
+                  
+                    <li><a href="/search?q=%23idothat2" name="#idothat2" title="People are RTing @idothat2 or tweeting their own examples of behaviors they imagine others may share." rel="nofollow">#idothat2</a></li>
+                  
+                    <li><a href="/search?q=%22Howard+Zinn%22" name="&quot;Howard Zinn&quot;" title="The American historian and professor has passed away (Jan. 27). He was eighty-seven." rel="nofollow">Howard Zinn</a></li>
+                  
+                    <li><a href="/search?q=%23lingerieday" name="#lingerieday" title="Some people are considering changing their avatar to a photo of themselves wearing lingerie (girls) or underwear (guys). " rel="nofollow">#lingerieday</a></li>
+                  
+                
+              </ul>
+            </div>
+          
+        
+        <div class="search-tip">
+          <h3>Search tip</h3>
+          <div>Use <em>from:</em> immediately before a username to find tweets from that user. Example: <a href="/search?q=from%3Aalexiskold">from:alexiskold</a> will find tweets sent from the user "alexiskold".</div>
+        </div>
+        <div class="signup-tip">
+          <h2><strong>Join</strong> the conversation</h2>
+          <a href="/signup">Sign up now</a> to contribute what's going on in your world and to filter your view of Twitter down to the people and topics that interest you most.
+        </div>
+      </div>
+      <div id="content" class="homepage">
+        <h2 id="timeline_heading"></h2>
+                  <div data="{&quot;search&quot;:{&quot;delay&quot;:20,&quot;decay&quot;:1.25,&quot;max_delay&quot;:180},&quot;timeline&quot;:{&quot;delay&quot;:30,&quot;decay&quot;:1.5,&quot;max_refresh_size&quot;:40,&quot;max_delay&quot;:300}}" id="new_results_notification"><a accesskey="n" class="minor-notification" id="results_update" style="display:none;"></a></div>
+        
+        <ol id="timeline" class="statuses"></ol>
+        <div id="pagination"></div>
+      </div>
+      <div class="clear"></div>
+    </div>
+    
+
+    
+
+    
+    
+  <div id="footer" class="round wide">
+      <h3 class="offscreen">Footer</h3>
+      
+      
+      <form action="/sessions/change_locale" id="lf" method="post" style="display:none;"><div style="margin:0;padding:0"><input name="authenticity_token" type="hidden" value="f2d580d0ecb534556df5b953e8e46b5f0b3cba01" /></div>
+  <input type="hidden" name="lang"  id="lang" value="en"/>
+</form>
+<ul class="language-select"><li>Language:</li><li><span>English</span>&nbsp;<small>&#9660;</small></li></ul>
+<ol class="language-menu round">
+  <li id="it">Italian - Italiano</li>
+  <li id="es">Spanish - Español</li>
+  <li id="en">English</li>
+  <li id="fr">French - français</li>
+  <li id="de">German - Deutsch</li>
+  <li id="ja">Japanese - 日本語</li>
+</ol>
+    
+      <ul>
+          <li class="first">&copy; 2009 Twitter</li>
+          <li><a href="/about#about">About Us</a></li>
+          <li><a href="/about#contact">Contact</a></li>
+          <li><a href="http://blog.twitter.com">Blog</a></li>
+          <li><a href="http://status.twitter.com">Status</a></li>
+                      <li><a href="/goodies">Goodies</a></li>
+                    <li><a href="http://apiwiki.twitter.com/">API</a></li>
+                      <li><a href="http://business.twitter.com/twitter101">Business</a></li>
+                    <li><a href="/help/start">Help</a></li>
+          <li><a href="/jobs">Jobs</a></li>
+          <li><a href="/tos">Terms</a></li>
+          <li><a href="/privacy">Privacy</a></li>
+      </ul>
+  </div>
+
+
+  </div>
+
+  
+  <script type="text/javascript">
+      page.summizeSearchUrl = 'http://integratedsearch.twitter.com/search.html';
+  page.query = '';
+  page.locale = 'en';
+    window.twttr = window.twttr || {};
+    twttr.form_authenticity_token = 'f2d580d0ecb534556df5b953e8e46b5f0b3cba01';
+  
+  </script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.3.0/jquery.min.js" type="text/javascript"></script>
+<script src="http://a2.twimg.com/a/1264550348/javascripts/front.js?1264632594" type="text/javascript"></script>
+  
+
+  
+  <div id="notifications"></div>
+
+      <!-- BEGIN google analytics -->
+
+  <script type="text/javascript">
+    var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+    document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+  </script>
+
+  <script type="text/javascript">
+
+    try {
+      var pageTracker = _gat._getTracker("UA-30775-6");
+      pageTracker._setDomainName("twitter.com");
+            pageTracker._setVar('Not Logged In');
+            pageTracker._setVar('lang: en');
+            pageTracker._initData();
+                              pageTracker._trackPageview('/');
+                  } catch(err) { }
+
+  </script>
+
+  <!-- END google analytics -->
+
+
+
+
+</body>
+</html>
+";s:8:"response";a:2:{s:4:"code";i:200;s:7:"message";s:2:"OK";}s:7:"cookies";a:11:{i:0;O:14:"WP_Http_Cookie":5:{s:4:"name";s:10:"auth_token";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:1;O:14:"WP_Http_Cookie":5:{s:4:"name";s:7:"param_q";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:2;O:14:"WP_Http_Cookie":5:{s:4:"name";s:10:"param_page";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:3;O:14:"WP_Http_Cookie":5:{s:4:"name";s:12:"param_status";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:4;O:14:"WP_Http_Cookie":5:{s:4:"name";s:27:"param_in_reply_to_status_id";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:5;O:14:"WP_Http_Cookie":5:{s:4:"name";s:17:"param_in_reply_to";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:6;O:14:"WP_Http_Cookie":5:{s:4:"name";s:12:"param_source";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:7;O:14:"WP_Http_Cookie":5:{s:4:"name";s:10:"param_user";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:8;O:14:"WP_Http_Cookie":5:{s:4:"name";s:8:"param_id";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:9;O:14:"WP_Http_Cookie":5:{s:4:"name";s:15:"dispatch_action";s:5:"value";s:0:"";s:7:"expires";i:0;s:4:"path";s:1:"/";s:6:"domain";N;}i:10;O:14:"WP_Http_Cookie":5:{s:4:"name";s:13:"_twitter_sess";s:5:"value";s:267:"BAh7CToMY3NyZl9pZCIlYzM5NWU1NThkYjVhOWYyNGFkMGRlNTAwZDZhNzJl%0AZTM6EXRyYW5zX3Byb21wdDA6B2lkIiUxNDliMjY5YmQyNDAwYjQ1NThkYmYw%0AZDhjNTNkZWQ5MiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--2fe2eb95fb5009e3a76ee14f047e990ee2057166";s:7:"expires";N;s:4:"path";s:1:"/";s:6:"domain";s:12:".twitter.com";}}}

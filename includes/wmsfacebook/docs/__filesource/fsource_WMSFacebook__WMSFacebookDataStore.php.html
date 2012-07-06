@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos -->
+			<title>File Source for WMSFacebookDataStore.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+			<meta http-equiv='Content-Type' content='text/html; charset=iso-8859-1'/>
+		</head>
+		<body>
+						<h1>Source for file WMSFacebookDataStore.php</h1>
+<p>Documentation is available at <a href="../WMSFacebook/_WMSFacebookDataStore.php.html">WMSFacebookDataStore.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-inc">require_once&nbsp;</span><span class="src-str">'WMSFacebookObject.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-inc">require_once&nbsp;</span><span class="src-str">'WMSFacebookDataStoreObject.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-inc">require_once&nbsp;</span><span class="src-str">'WMSFacebookDataStoreAssociationLink.php'</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a5"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;Represents&nbsp;a&nbsp;database&nbsp;built&nbsp;upon&nbsp;Facebook's&nbsp;Data&nbsp;Store&nbsp;API.</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;This&nbsp;class&nbsp;facilitates&nbsp;the&nbsp;creation&nbsp;of&nbsp;objects&nbsp;(i.e.,&nbsp;database&nbsp;tables)</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;and&nbsp;association&nbsp;links.&nbsp;It&nbsp;also&nbsp;contains&nbsp;helper&nbsp;methods&nbsp;for&nbsp;data</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;compression&nbsp;over&nbsp;HTTP&nbsp;(using&nbsp;bzip2&nbsp;compression).&nbsp;Using&nbsp;compression&nbsp;can</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*&nbsp;significantly&nbsp;increase&nbsp;the&nbsp;amount&nbsp;of&nbsp;data&nbsp;that&nbsp;can&nbsp;be&nbsp;packed&nbsp;into</span></div></li>
+<li><div class="src-line"><a name="a13"></a><span class="src-doc">&nbsp;*&nbsp;Facebook's&nbsp;per-column&nbsp;(of&nbsp;type&nbsp;BLOB)&nbsp;data&nbsp;limit.</span></div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@example</span><span class="src-doc">&nbsp;data-store.php&nbsp;Data&nbsp;Store&nbsp;Example</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a17"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dave&nbsp;Jarvis</span></div></li>
+<li><div class="src-line"><a name="a18"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://www.davidjarvis.ca</span></div></li>
+<li><div class="src-line"><a name="a19"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;&nbsp;Copyright&nbsp;(c)&nbsp;2007&nbsp;White&nbsp;Magic&nbsp;Software,&nbsp;Ltd.</span></div></li>
+<li><div class="src-line"><a name="a20"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;http://www.gnu.org/licenses/lgpl.html&nbsp;GNU&nbsp;LGPL&nbsp;Version&nbsp;3</span></div></li>
+<li><div class="src-line"><a name="a21"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@version</span><span class="src-doc">&nbsp;&nbsp;&nbsp;&nbsp;0.0.1</span></div></li>
+<li><div class="src-line"><a name="a22"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a23"></a><span class="src-key">class&nbsp;</span><a href="../WMSFacebook/WMSFacebookDataStore.html">WMSFacebookDataStore</a>&nbsp;<span class="src-key">extends&nbsp;</span><a href="../WMSFacebook/WMSFacebookObject.html#methodWMSFacebookObject">WMSFacebookObject</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a24"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a25"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Used&nbsp;to&nbsp;instantiate&nbsp;a&nbsp;new&nbsp;WMSFacebookDataStore&nbsp;instance.</span></div></li>
+<li><div class="src-line"><a name="a26"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a27"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">Facebook&nbsp;</span><span class="src-doc-var">$facebook&nbsp;</span><span class="src-doc">Valid&nbsp;Facebook&nbsp;instance.</span></div></li>
+<li><div class="src-line"><a name="a28"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a29"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../WMSFacebook/WMSFacebookDataStore.html#methodWMSFacebookDataStore">WMSFacebookDataStore</a><span class="src-sym">(&nbsp;</span><span class="src-var">$facebook&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a30"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-id">parent</span><span class="src-sym">::</span><a href="../WMSFacebook/WMSFacebookObject.html#methodWMSFacebookObject">WMSFacebookObject</a><span class="src-sym">(&nbsp;</span><span class="src-var">$facebook&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a32"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a33"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a34"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Creates&nbsp;an&nbsp;object&nbsp;type&nbsp;with&nbsp;the&nbsp;given&nbsp;name.&nbsp;This&nbsp;will&nbsp;fail&nbsp;silently</span></div></li>
+<li><div class="src-line"><a name="a35"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;if&nbsp;the&nbsp;object&nbsp;creation&nbsp;failed&nbsp;because&nbsp;it&nbsp;already&nbsp;exists.&nbsp;Otherwise,</span></div></li>
+<li><div class="src-line"><a name="a36"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;the&nbsp;error&nbsp;will&nbsp;be&nbsp;thrown&nbsp;to&nbsp;the&nbsp;calling&nbsp;code.</span></div></li>
+<li><div class="src-line"><a name="a37"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a38"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$objectName&nbsp;</span><span class="src-doc">Name&nbsp;of&nbsp;the&nbsp;object&nbsp;type&nbsp;to&nbsp;create.</span></div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">WMSFacebookDataStoreObject&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a42"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../WMSFacebook/WMSFacebookDataStore.html#methodcreateObjectType">createObjectType</a><span class="src-sym">(&nbsp;</span><span class="src-var">$objectName&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$wmsDSObject&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../WMSFacebook/WMSFacebookDataStoreObject.html">WMSFacebookDataStoreObject</a></span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../WMSFacebook/WMSFacebookObject.html#methodgetFacebook">getFacebook</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-var">$objectName&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$wmsDSObject</span><span class="src-sym">-&gt;</span><span class="src-id">create</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$wmsDSObject</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a52"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Creates&nbsp;an&nbsp;association&nbsp;link&nbsp;of&nbsp;a&nbsp;given&nbsp;name,&nbsp;with&nbsp;respect&nbsp;to&nbsp;the&nbsp;two</span></div></li>
+<li><div class="src-line"><a name="a53"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;aliases.&nbsp;The&nbsp;aliases&nbsp;are&nbsp;names&nbsp;for&nbsp;the&nbsp;IDs.&nbsp;For&nbsp;example&nbsp;&quot;user_id&quot;&nbsp;would</span></div></li>
+<li><div class="src-line"><a name="a54"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;be&nbsp;an&nbsp;alias&nbsp;that&nbsp;represents&nbsp;the&nbsp;Facebook&nbsp;user's&nbsp;unique&nbsp;identifier.</span></div></li>
+<li><div class="src-line"><a name="a55"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a56"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$associationName&nbsp;</span><span class="src-doc">Name&nbsp;of&nbsp;the&nbsp;association&nbsp;link&nbsp;to&nbsp;create.</span></div></li>
+<li><div class="src-line"><a name="a57"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$alias1&nbsp;</span><span class="src-doc">Name&nbsp;of&nbsp;the&nbsp;ID&nbsp;to&nbsp;associate&nbsp;with&nbsp;alias2.</span></div></li>
+<li><div class="src-line"><a name="a58"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$alias2&nbsp;</span><span class="src-doc">Name&nbsp;of&nbsp;the&nbsp;ID&nbsp;to&nbsp;associate&nbsp;with&nbsp;alias1.</span></div></li>
+<li><div class="src-line"><a name="a59"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a60"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@return&nbsp;</span><span class="src-doc-type">WMSFacebookDataStoreAssociationLink&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a61"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../WMSFacebook/WMSFacebookDataStore.html#methodcreateAssociationLink">createAssociationLink</a><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$associationName</span><span class="src-sym">,&nbsp;</span><span class="src-var">$alias1</span><span class="src-sym">,&nbsp;</span><span class="src-var">$alias2&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a64"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$wmsDSAssociation&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../WMSFacebook/WMSFacebookDataStoreAssociationLink.html">WMSFacebookDataStoreAssociationLink</a></span><span class="src-sym">(</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$this</span><span class="src-sym">-&gt;</span><a href="../WMSFacebook/WMSFacebookObject.html#methodgetFacebook">getFacebook</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">,&nbsp;</span><span class="src-var">$associationName&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a67"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$wmsDSAssociation</span><span class="src-sym">-&gt;</span><span class="src-id">create</span><span class="src-sym">(&nbsp;</span><span class="src-var">$alias1</span><span class="src-sym">,&nbsp;</span><span class="src-var">$alias2&nbsp;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a68"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a69"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$wmsDSAssociation</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a70"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a71"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a72"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a73"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Compresses&nbsp;the&nbsp;given&nbsp;data&nbsp;and&nbsp;makes&nbsp;it&nbsp;suitable&nbsp;for&nbsp;transmission&nbsp;over</span></div></li>
+<li><div class="src-line"><a name="a74"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;HTTP-based&nbsp;protocols.&nbsp;This&nbsp;uses&nbsp;bzip2&nbsp;compression,&nbsp;which&nbsp;must&nbsp;have</span></div></li>
+<li><div class="src-line"><a name="a75"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;been&nbsp;compiled&nbsp;into&nbsp;PHP.</span></div></li>
+<li><div class="src-line"><a name="a76"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a77"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$data&nbsp;</span><span class="src-doc">Information&nbsp;to&nbsp;compress.</span></div></li>
+<li><div class="src-line"><a name="a78"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">int&nbsp;</span><span class="src-doc-var">$level&nbsp;</span><span class="src-doc">How&nbsp;well&nbsp;to&nbsp;compress&nbsp;(9&nbsp;=&nbsp;best/slow,&nbsp;1&nbsp;=&nbsp;poor/fast).</span></div></li>
+<li><div class="src-line"><a name="a79"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a80"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;decompress</span></div></li>
+<li><div class="src-line"><a name="a81"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a82"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">static&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../WMSFacebook/WMSFacebookDataStore.html#methodcompress">compress</a><span class="src-sym">(&nbsp;</span><span class="src-var">$data</span><span class="src-sym">,&nbsp;</span><span class="src-var">$level&nbsp;</span>=&nbsp;<span class="src-num">9&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a83"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/urlencode">urlencode</a><span class="src-sym">(&nbsp;</span><a href="http://www.php.net/bzcompress">bzcompress</a><span class="src-sym">(&nbsp;</span><span class="src-var">$data</span><span class="src-sym">,&nbsp;</span><span class="src-var">$level&nbsp;</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a84"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a85"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a86"></a>&nbsp;&nbsp;<span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a87"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;Decompresses&nbsp;the&nbsp;given&nbsp;data&nbsp;that&nbsp;was&nbsp;previously&nbsp;compressed&nbsp;with&nbsp;a&nbsp;call</span></div></li>
+<li><div class="src-line"><a name="a88"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;to&nbsp;compress.</span></div></li>
+<li><div class="src-line"><a name="a89"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a90"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@param&nbsp;</span><span class="src-doc-type">string&nbsp;</span><span class="src-doc-var">$data&nbsp;</span><span class="src-doc">Information&nbsp;to&nbsp;decompress.</span></div></li>
+<li><div class="src-line"><a name="a91"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*</span></div></li>
+<li><div class="src-line"><a name="a92"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*&nbsp;</span><span class="src-doc-coretag">@see</span><span class="src-doc">&nbsp;compress</span></div></li>
+<li><div class="src-line"><a name="a93"></a><span class="src-doc">&nbsp;&nbsp;&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a94"></a>&nbsp;&nbsp;<span class="src-key">public&nbsp;</span><span class="src-key">static&nbsp;</span><span class="src-key">function&nbsp;</span><a href="../WMSFacebook/WMSFacebookDataStore.html#methoddecompress">decompress</a><span class="src-sym">(&nbsp;</span><span class="src-var">$data&nbsp;</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a95"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><a href="http://www.php.net/bzdecompress">bzdecompress</a><span class="src-sym">(&nbsp;</span><a href="http://www.php.net/urldecode">urldecode</a><span class="src-sym">(&nbsp;</span><span class="src-var">$data&nbsp;</span><span class="src-sym">)&nbsp;)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a96"></a>&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a97"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a98"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 17 Dec 2007 20:10:41 -0800 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</body>
+</html>
